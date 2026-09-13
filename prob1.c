@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
     int count = 0;
     char *inputChar;
 
-    // Read input strings from input and replace the newline with a null terminator.
+    // Read input strings from stdin and replace the newline with a null terminator.
     while (count < SIZE && fgets(input, sizeof(input), stdin) != NULL) {
         inputChar = input;
         while (*inputChar != '\0') {
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]){
             inputChar++;
         }
 
-        // use newstring to allocate memory for the string and copy the input string into it.
+        // Use newString to allocate memory for the string and copy the input string into it.
         *nextString = newString(input, (int)strlen(input));
 
         // Check if malloc was successful. If it wasn't, use free to prevent memory leaks before exiting the program.
