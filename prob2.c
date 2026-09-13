@@ -53,14 +53,14 @@ int main(int argc, char *argv[]){
     *nextString = NULL;
     showArray(strings);
 
-    // Make sure to free the memory allocated for each string in the array before exiting the program to prevent memory leaks.
+    // Making sure to free the memory allocated for each string in the array before exiting the program to prevent memory leaks.
     nextString = strings;
     while (*nextString != NULL) {
         free(*nextString);
         nextString++;
     }
 
-    // Almost forgot to free the memory allocated for strings since we allocated space on the heap for it this time.
+    // Almost forgot to free the memory allocated for strings variable since we allocated space on the heap for it this time.
     free(strings);
     return 0;
 }

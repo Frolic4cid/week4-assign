@@ -69,6 +69,7 @@ char *newString(char *str, int size){
 }
 
 // Uses pointer notation to iterate through the string array and prints each string. I wasn't sure what I needed to return so I just returned a null character.
+// Uses count to determine how many strings to print.
 char showArray(char **strings, int count){
     char **current = strings;
 
